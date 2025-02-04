@@ -42,6 +42,9 @@ app.use('/api/job', jobRouter);
 // API route to handle form submission
 app.use('/api/admin', adminRouter);
 
+app.use('/api', (req, res) => {
+    res.send("Hello, Naini!");
+  });
 
 
 // Start the server
