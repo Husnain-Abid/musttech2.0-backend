@@ -31,18 +31,11 @@ connectDB();
 
 
 
-// API route to handle form submission
-app.use('/uploads', express.static('uploads')); // Serve uploaded files
 
-app.use('/api', emailRouter);
 // API route to handle form submission
 app.use('/api/contact', contactRouter);
-// API route to handle form submission
-app.use('/api/job', jobRouter);
-// API route to handle form submission
-app.use('/api/admin', adminRouter);
 
-app.use('/api', (req, res) => {
+app.use('/api/router', (req, res) => {
     res.send("Hello, Naini!");
   });
 
